@@ -8,6 +8,7 @@ import router from './router'
 import store from './store'
 
 // CSS global
+import './assets/css/main.styl'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
