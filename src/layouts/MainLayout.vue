@@ -1,12 +1,20 @@
 <template>
   <div class="container">
-    <router-view/>
+    <HeaderBar />
+    <router-view />
+    <FooterBar />
   </div>
 </template>
 
 <script>
+import HeaderBar from '@/components/HeaderBar/Index'
+import FooterBar from '@/components/Footer/Index'
 
 export default {
-  name: 'MainLayout'
+  name: 'MainLayout',
+  components: {
+    HeaderBar,
+    FooterBar
+  }
 }
 </script>
