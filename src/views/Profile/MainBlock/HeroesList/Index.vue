@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Heroes List</h1>
-    <div class="heroes-list border-top border-secondary mt-5 pt-5">
+    <h2 class="font-diablo mt-4">Heroes List</h2>
+    <div class="heroes-list border-top border-secondary mt-2 pt-5">
       <b-table hover striped dark :items="heroes" :fields="fields" stacked="sm" small>
         <template v-slot:cell(name)="data">
           <HeroIco :hero="data.item" />
