@@ -1,7 +1,5 @@
 <template>
-  <div class="hero-ico d-flex align-items-center">
-    <span class="hero-image border" :class="heroClassImg"/>
-    <span class="hero-name ml-2 font-weight-bold" :class="{'text-danger': hero.hardcore}">
+<div class="hero-ico d-flex align-items-center hover-cursor-pointer" @click="goToHero(hero.id)">    <span class="hero-name ml-2 font-weight-bold" :class="{'text-danger': hero.hardcore}">
       {{ hero.name }}
     </span>
     <img v-if="hero.seasonal" src="@/assets/img/leaf.png" width="12px" class="ml-2" alt="seasonal_leaf">
@@ -9,8 +7,10 @@
 </template>
 
 <script>
+import goToHero from '@/mixins/goToHero'
 export default {
   name: 'HeroIco',
+  mixins: [goToHero],
   props: {
     hero: {
       required: true,
